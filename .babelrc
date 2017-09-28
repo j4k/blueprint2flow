@@ -1,0 +1,24 @@
+{
+  "env": {
+    "testing": {
+      "presets": [["env", {
+        "targets": {
+          "node": "current"
+        }
+      }]],
+      "plugins": ["transform-flow-strip-types"]
+    },
+    "development": {
+      "presets": ["env"],
+      "plugins": ["transform-flow-strip-types"]
+    },
+    "production": {
+      "presets": [
+        ["env", {
+          "modules": false
+        }]
+      ],
+      "plugins": ["external-helpers", "transform-flow-strip-types"]
+    }
+  }
+}
